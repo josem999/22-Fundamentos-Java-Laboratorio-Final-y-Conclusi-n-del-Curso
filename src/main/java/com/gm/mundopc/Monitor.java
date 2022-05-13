@@ -3,16 +3,17 @@ package com.gm.mundopc;
 
 
 public class Monitor {
-    private int idMonitor;
+    private final int idMonitor; // final para tener un identificador unico por cada objeto del tipo monitor que se utilice
     private String marca;
     private double tamanio;
     private static int contadorMonitores;
     
     private Monitor(){
-        this.idMonitor = ++contadorMonitores; 
+        idMonitor = ++contadorMonitores;
     }
     
     public Monitor(String marca, double tamanio){
+        this(); //llamar el constructor vacio para inicializar la variable idmonitor
         this.marca = marca;
         this.tamanio = tamanio;
     }
@@ -33,6 +34,11 @@ public class Monitor {
     public void setTamanio(double tamanio) {
         this.tamanio = tamanio;
     }
+
+    public int getIdMonitor() {
+        return idMonitor;
+    }
+    
     
     
 

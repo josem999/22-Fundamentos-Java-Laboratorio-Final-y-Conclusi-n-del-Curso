@@ -3,14 +3,15 @@ package com.gm.mundopc;
 
 
 public class Orden {
-    private int idOrden;
+    private final int idOrden;
     private Computadora computadoras[];
     private static int contadorOrdenes;
-    private static int contadorComputadoras;
-    private static final int MAX_COMPUTADORAS = 5;
+    private int contadorComputadoras;
+    private static final int MAX_COMPUTADORAS = 10;
     
     public Orden(){
        this.idOrden = ++contadorOrdenes; 
+       this.computadoras = new Computadora[Orden.MAX_COMPUTADORAS];
     }
     
     public void agregarComputadora(Computadora computadora){
