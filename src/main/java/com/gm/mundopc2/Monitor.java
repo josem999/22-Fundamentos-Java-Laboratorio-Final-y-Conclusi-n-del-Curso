@@ -3,17 +3,17 @@ package com.gm.mundopc2;
 
 
 public class Monitor {
-    private int idMonitor;
+    private final int idMonitor;
     private String marca;
     private double tamanio;
     private static int contadorMonitores;
     
     private Monitor(){
-        
+      this.idMonitor = ++Monitor.contadorMonitores;
     }
     
     public Monitor(String marca, double tamanio){
-        this.idMonitor = ++Monitor.contadorMonitores;
+        this();
         this.marca = marca;
         this.tamanio = tamanio;
     }
