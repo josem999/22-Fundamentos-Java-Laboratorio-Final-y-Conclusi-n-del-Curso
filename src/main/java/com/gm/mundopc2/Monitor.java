@@ -43,6 +43,11 @@ public class Monitor {
         return contadorMonitores;
     }
 
+    @Override
+    public String toString() {
+        return "Monitor{" + "idMonitor=" + idMonitor + ", marca=" + marca + ", tamanio=" + tamanio + '}';
+    }
+
 
     
 }

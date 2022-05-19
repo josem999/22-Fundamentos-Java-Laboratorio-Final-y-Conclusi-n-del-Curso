@@ -10,11 +10,11 @@ public class Computadora {
     private Raton raton;
     
     private Computadora(){
-        
+        this.idComputadora = ++Computadora.idComputadora;
     }
     
     public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton){
-        this.idComputadora = ++Computadora.idComputadora;
+        this();
         this.nombre = nombre;
         this.raton = raton;
         this.teclado = teclado;
@@ -55,7 +55,7 @@ public class Computadora {
 
     @Override
     public String toString() {
-        return "Computadora{" + "nombre=" + nombre + ", monitor=" + monitor + ", teclado=" + teclado + ", raton=" + raton + '}';
+        return "Computadora{" + "idComputadora=" + nombre + ", monitor=" + monitor + ", teclado=" + teclado + ", raton=" + raton + '}';
     }
     
     
